@@ -1,0 +1,81 @@
+# 📘 Practice Notes – Forms, Tables & Fields  
+**Date:** 2025-11-15  
+**Topic:** Creating Tables, Fields, and Designing Forms in ServiceNow
+
+---
+
+## 🏁 Overview
+Today I practiced the fundamentals of ServiceNow application development by working with:
+- Creating new tables  
+- Adding and configuring fields  
+- Designing forms using Form Layout  
+- Organizing form sections  
+- Understanding dictionary entries  
+- Related lists and field properties  
+
+The goal was to understand how data is structured in ServiceNow and how form design impacts usability.
+
+---
+
+## 🛠️ What I Practiced
+
+### ✔️ 1. Creating a New Table
+- Created a custom table using **Table → Create New**
+- Configured:
+  - Label  
+  - Name  
+  - Application scope  
+  - Auto-number  
+  - Extends table (optional)
+- Set **User criteria** for form access  
+
+### ✔️ 2. Adding Fields
+Added multiple fields with proper data types:
+- String  
+- Integer  
+- Choice  
+- Reference  
+- Date/Time  
+- Email  
+- True/False  
+
+Configured field properties:
+- Mandatory  
+- Default value  
+- Max length  
+- Read-only  
+- Display field  
+
+Learned how each field creates a **dictionary entry**.
+
+---
+
+## ✔️ 3. Form Design
+Used **Form Layout** to:
+- Add fields to form  
+- Remove unwanted fields  
+- Re-arrange fields  
+- Create **sections** for better grouping  
+- Add custom names to sections  
+- Add Related Lists like:
+  - Notes
+  - Activity  
+  - Child tables  
+  - Attachments  
+
+Also checked **Form Design** to visually organize fields.
+
+---
+
+## ✔️ 4. Dictionary Entries
+Explored:
+- Column name  
+- Type  
+- Attributes  
+- Default value  
+- Choice list configuration  
+- Reference field settings  
+
+Learned how dictionary attributes affect UI behavior.
+
+---
