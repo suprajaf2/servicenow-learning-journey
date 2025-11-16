@@ -1,0 +1,69 @@
+# 📘 Practice Notes – UI Policies  
+**Date:** 2025-11-16  
+**Topic:** UI Policies & UI Policy Actions in ServiceNow
+
+---
+
+## 🏁 Overview
+Today I practiced **UI Policies**, which allow dynamic form behavior without scripting.  
+They are useful for:
+- Making fields mandatory
+- Showing or hiding fields
+- Making fields read-only
+- Running conditions based on field values
+
+---
+
+## 🛠️ What I Practiced Today
+
+### ✔️ 1. Creating a UI Policy
+- Opened: **System UI → UI Policies**
+- Selected target table
+- Added conditions  
+- Enabled / Disabled reverse if false
+
+---
+
+## ✔️ 2. UI Policy Conditions I Used
+I created multiple sample conditions:
+Example-1
+
+Scenario: If someone chooses Assigned To, they must also choose Assignment Group.
+Condition:
+Field: assigned_to
+Operator: is not empty
+UI Policy Action:
+Field: assignment_group
+Mandatory: True
+
+Example 2:
+
+Make Subcategory Mandatory When Category is Filled 
+Scenario: If a user selects a Category, they must select a Subcategory. 
+Condition: 
+Field: category
+Operator: is not empty
+UI Policy Action: 
+Field: subcategory 
+Mandatory: True 
+Visible: True how
+
+Example 3
+
+When State = Resolved, the Resolved Notes field should become visible and mandatory
+Condition: State is Resolved
+UI Policy Action: 
+Field: Close_notes
+Mandatory : True
+Visible : True
+Read-only : False
+Reverse if false : Checked
+---
+
+## ✔️ 3. UI Policy Actions Created
+For each policy, I configured:
+
+- Mandatory: True/False  
+- Read-only: True/False  
+- Visible: True/False  
+
