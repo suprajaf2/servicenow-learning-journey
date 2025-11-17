@@ -1,0 +1,35 @@
+*UI Actions
+
+UI Actions are buttons, links, and context menu items that trigger logic on forms or lists. They are used to perform actions like:
+
+Submitting forms
+
+Running scripts
+
+Redirecting users
+
+Updating records
+
+Displaying messages
+
+-> UI Actions appear as:
+
+Form buttons (e.g., Update, Save, Resolve)
+
+Form links
+
+List buttons
+
+List choice/context menu items
+
+* Types of UI Actions
+
+Form Button – A button on the form header
+
+Form Link – A link under the form
+
+List Button – A button in the list view
+
+List Choice – Right‑click → list context menu action
+
+Example-1
