@@ -1,0 +1,82 @@
+*A Record Producer is a type of catalog item that creates records in any table through a user-friendly Service Portal form. It collects user inputs and automatically maps them to table fields.
+
+Record Producers are commonly used to:
+
+-> Create records in custom tables
+
+-> Collect data from users without showing the backend form
+
+-> Run scripts to calculate fields or set defaults
+
+-> Trigger workflows or notifications
+
+Example 1: Student Information Record Producer
+📌 Scenario:
+
+Collect student details and create a record in Student Information table.
+
+✔ Variables:
+
+u_name – Student Name
+
+u_department – Department
+
+u_year – Academic Year
+
+u_email – Email
+
+u_phone – Phone Number
+
+u_student_id
+
+u_Parent_email
+
+u_parent_number
+
+u_Section
+
+u_status
+
+
+
+Example 2: Student Performance Record Producer
+📌 Scenario:
+
+Collect student marks and calculate percentage and status automatically.
+
+✔ Variables:
+
+u_name – Name
+
+u_student_id
+
+u_subject_name – Subject
+
+u_max_marks – Maximum Marks
+
+u_scored_marks – Marks Obtained
+
+u_percentage – Calculated Percentage
+
+u_status – Pass/Fail
+
+
+
+Example 3: Employee Details Record Producer
+📌 Scenario:
+
+Collect employee information and create a record in Employee Details table.
+
+✔ Variables:
+
+u_emp_name – Employee Name
+
+u_department – Department
+
+u_employee_experiences -Experience
+
+u_salary- Salary
+
+u_fresher 
+
+u_Location
