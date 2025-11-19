@@ -1,0 +1,19 @@
+* Order Guide 
+
+An Order Guide in ServiceNow allows users to order multiple related catalog items together in one request. It helps collect common information once and then generates multiple RITMs under a single REQ. Order Guides are mainly used for onboarding, hardware bundles, and access setup.
+
+The Order Guide contains:
+
+Guide variables (common fields the user fills once)
+
+Included catalog items
+
+Rules to decide which items should be shown based on user selections
+
+When submitted, the Order Guide creates:
+
+1 REQ (Request)
+
+Multiple RITMs (one for each catalog item inside the guide)
+
+Order Guides make ordering faster, avoid duplicate data entry, and ensure consistency in user requests
