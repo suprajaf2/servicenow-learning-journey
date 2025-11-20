@@ -1,0 +1,59 @@
+Update Set – 
+
+An Update Set in ServiceNow is a container that captures configuration changes made on a development instance. It helps move customizations from one instance to another (Dev → Test → Prod). Only configuration changes are captured, not data.
+
+What an Update Set Captures
+
+Business Rules
+
+Client Scripts
+
+UI Policies
+
+UI Actions
+
+Tables & Columns
+
+Forms & Views
+
+Dictionary changes
+
+Script Includes
+
+Catalog Items
+
+Record Producers
+
+ACLs
+
+Workflows / Flows
+
+Email Notifications
+
+What an Update Set Does NOT Capture
+
+Data (records inserted in tables)
+
+Users & Groups
+
+Scheduled Jobs
+
+Attachments
+
+Imported data through Import Set
+
+Homepages
+
+Existing record updates (e.g., updating incident record values)
+
+Steps to Use an Update Set
+
+Create a New Update Set in System Update Sets → Local Update Sets.
+
+Mark it as Current so changes will be captured.
+
+Make your configuration changes in the instance.
+
+Review the Update Set for missing or skipped items.
+
+Export as XML (if needed) or Commit on the target instance.
