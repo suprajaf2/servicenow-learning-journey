@@ -1,0 +1,21 @@
+*Business Rules
+
+A Business Rule is a server-side script that runs when a record is inserted, updated, deleted, displayed, or queried. Business Rules help automate backend logic like updating fields, validating data, or creating related records.
+
+Business Rules run on:
+
+Before Insert
+
+Before Update
+
+After Insert/Update/Delete
+
+Display
+
+Async (background)
+
+They are triggered even when updates come from workflows, integrations, import sets, or UI actions.
+
+
+
+
