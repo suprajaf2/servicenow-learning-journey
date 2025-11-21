@@ -1,0 +1,61 @@
+>Service Catalog:
+
+The Service Catalog provides a user-friendly interface where users can request services, items, and access.
+It contains categories, catalog items, record producers, order guides, and content items.
+
+🟩 Key Components
+1. Service Catalog
+
+A collection of services/items offered to users (like Laptops, Access Requests, HR Services).
+
+2. Catalog Item
+
+A specific requestable item, example:
+
+Laptop Request
+
+ID Card Request
+
+Software Installation
+
+Access to Application
+
+Each catalog item has:
+
+Variables (fields)
+
+UI policies
+
+Catalog Client Scripts
+
+Workflows / Flow Designer
+
+Approval rules
+
+3. Categories
+
+Catalog items are grouped inside categories to keep the catalog organized.
+
+Examples:
+
+IT Services
+
+HR Services
+
+Facilities
+
+Hardware
+
+Software
+
+
+🟦 Service Catalog Example – Laptop Category
+Service Catalog: IT Services
+Category: Laptops
+Catalog Items:
+Item Name	
+Gaming Laptop :High-performance laptops for gaming and graphics-intensive work. Variables: Brand, Model, RAM, Storage, Graphics Card.
+Business Laptop	:Lightweight laptops for office work and productivity. Variables: Brand, Model, RAM, Storage, Accessories.
+Student Laptop:	Budget-friendly laptops for students. Variables: Brand, Model, RAM, Storage, Warranty.
+Designer Laptop	:Laptops optimized for designers and video editing. Variables: Brand, Model, RAM, Storage, Graphics Card, Screen Size.
+
