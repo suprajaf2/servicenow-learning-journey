@@ -1,0 +1,52 @@
+📘 Data Policy 
+
+Data Policy in ServiceNow is used to enforce mandatory, read-only, and data validation rules at the server level, ensuring that only valid data enters the database.
+
+🔹 Key Points
+
+Works on server side (Import Sets, Integrations, APIs, Background scripts).
+
+Can also run on forms if “Apply to UI” is checked.
+
+Ensures data consistency across all data entry methods.
+
+Similar to UI Policy but more powerful because it runs outside the UI.
+
+🔹 Why We Use Data Policy
+
+UI Policy works only on forms, but data may come from:
+
+Import Sets
+
+API integrations
+
+Scripted inserts/updates
+
+Data Policy makes rules universal across all data sources.
+
+🔹 Typical Uses
+
+Making fields mandatory (e.g., Email must always be filled).
+
+Making fields read-only (e.g., State field controlled by workflow).
+
+Validating imported or integrated data.
+
+Enforcing rules during bulk data loads.
+
+🔹 Difference from UI Policy
+UI Policy	Data Policy
+Client-side (browser)	Server-side
+Works only on forms	Works on all data entries
+Cannot control integration data	Controls all sources
+Visible to user	Not visible to user
+🔹 Example
+
+Condition: Category = Laptop
+Action: Make RAM, Storage, Model mandatory across UI + imports + integrations.
+
+🔹 When to Convert UI Policy → Data Policy
+
+When imported/migrated data must follow the same rules.
+
+When API records must follow mandatory or read-only rules.
