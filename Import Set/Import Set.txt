@@ -1,0 +1,62 @@
+📘 Import Set 
+
+Import Set in ServiceNow is used to load data from external sources (Excel, CSV, JDBC, etc.) into ServiceNow tables. It works through a staging table and a transform process.
+
+🔹 Key Concepts
+1. Import Set Table (Staging Table)
+
+Temporary table where data is first loaded
+
+Prefix: u_ or x_
+
+Stores raw data exactly as uploaded
+
+2. Transform Map
+
+Rules for how data moves from Import Set Table ➝ Target Table
+
+Defines field mapping, conditions, and scripts
+
+3. Field Mapping
+
+Connects source field → target field
+
+Example: u_email → email
+
+4. Coalesce
+
+Helps avoid duplicate records
+
+If a field is coalesced:
+
+If match found → update
+
+If no match → insert new record
+
+5. Transform Scripts
+
+onBefore → runs before every insert/update
+
+onAfter → runs after record is inserted/updated
+
+Script → custom logic to transform fields
+
+6. Scheduled Imports
+
+Automate data loading from external sources daily/weekly
+
+Useful for HR, CMDB, vendor data, etc.
+
+🔹 Import Workflow
+
+Upload file (CSV/Excel)
+
+Load in Import Set table
+
+Create Transform Map
+
+Map fields & set coalesce
+
+Run Transform
+
+Data moves to Target Table
