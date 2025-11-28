@@ -1,0 +1,207 @@
+📘 GlideForm (g_form) –  
+
+g_form is a client-side API used in ServiceNow to interact with form fields.
+It works only in:
+
+✔ Client Scripts
+✔ UI Policies
+✔ Catalog Client Scripts
+✔ Record Producer Scripts
+
+🔹 Why Do We Use g_form?
+
+To control fields on the form, such as:
+
+Show / Hide fields
+
+Make fields mandatory
+
+Set and get values
+
+Disable / enable fields
+
+Display messages
+
+Restrict user actions
+
+GlideForm (g_form) – Complete Method List
+
+1. Get & Set Values
+✅ getValue(fieldName)
+
+Gets field value.
+
+g_form.getValue('short_description');
+
+✅ setValue(fieldName, value)
+
+Sets value into field.
+
+g_form.setValue('priority', 2);
+
+✅ clearValue(fieldName)
+
+Clears field.
+
+g_form.clearValue('subcategory');
+
+2. Show / Hide / Mandatory / ReadOnly
+✅ setVisible(fieldName, true/false)
+g_form.setVisible('category', false);
+
+✅ setMandatory(fieldName, true/false)
+g_form.setMandatory('impact', true);
+
+✅ setReadOnly(fieldName, true/false)
+g_form.setReadOnly('caller_id', true);
+
+3. Messages
+✅ addInfoMessage(message)
+g_form.addInfoMessage("Record loaded successfully.");
+
+✅ addErrorMessage(message)
+g_form.addErrorMessage("Please fill required fields.");
+
+4. Choice Field Methods
+✅ addOption(field, value, label)
+g_form.addOption('priority', '5', 'Very Low');
+
+✅ removeOption(field, value)
+g_form.removeOption('priority', '3');
+
+✅ clearOptions(field)
+g_form.clearOptions('subcategory');
+
+Field State Methods
+✅ isMandatory(field)
+
+Check if a field is mandatory.
+
+g_form.isMandatory('short_description');
+
+✅ isVisible(field)
+g_form.isVisible('category');
+
+✅ isReadOnly(field)
+g_form.isReadOnly('caller_id');
+
+
+Methods examples:
+var cat = g_form.getValue('category');
+g_form.addInfoMessage("Category is: " + cat);
+
+// 2️⃣ Set value to a field
+g_form.setValue('short_description', 'System generated description');
+
+// 3️⃣ Make field mandatory
+g_form.setMandatory('subcategory', true);
+
+// 4️⃣ Make field NOT mandatory
+g_form.setMandatory('subcategory', false);
+
+// 5️⃣ Hide a field
+g_form.setVisible('priority', false);
+
+// 6️⃣ Show a field
+g_form.setVisible('priority', true);
+
+// 7️⃣ Disable a field
+g_form.setReadOnly('impact', true);
+
+// 8️⃣ Enable a field
+g_form.setReadOnly('impact', false);
+
+// 9️⃣ Add a choice option
+g_form.addOption('priority', '5', 'Very Low', 4);
+
+// 🔟 Remove a choice option
+g_form.removeOption('priority', '4');
+
+// 11️⃣ Clear options (remove all choices)
+g_form.clearOptions('category');
+
+// 12️⃣ Show message on form (blue info)
+g_form.addInfoMessage("This is an info message!");
+
+// 13️⃣ Show error message (red alert)
+g_form.addErrorMessage("This is an error message!");
+
+// 14️⃣ Clear form messages
+g_form.clearMessages();
+
+// 15️⃣ Save the form
+// (Works only in UI Action client scripts)
+g_form.save();
+
+// 16️⃣ Submit form
+g_form.submit();
+
+// 17️⃣ Hide form sections
+g_form.setSectionDisplay('assignment_section', false);
+
+// 18️⃣ Show form sections
+g_form.setSectionDisplay('assignment_section', true);
+
+// 19️⃣ Flash a field (highlight)
+g_form.flash('priority', '#FFE4B5', 2000);
+
+// 2️⃣0️⃣ Add decoration on field (icon)
+g_form.addDecoration('priority', 'icon-star', 'High Priority');
+
+// 21️⃣ Remove decoration
+g_form.removeDecoration('priority', 'icon-star');
+
+// 22️⃣ Clear field value
+g_form.clearValue('description');
+
+// 23️⃣ Enable / Disable mandatory check (Client vs UI Policy control)
+g_form.setMandatory('assigned_to', true);
+
+// 24️⃣ Add choice dynamically
+g_form.addOption('state', 'testing', 'Testing');
+
+// 25️⃣ Trigger onChange manually
+g_form.changeFieldValue('category', 'software');
+
+// 26️⃣ Check if field is mandatory
+var isMand = g_form.isMandatory('impact');
+g_form.addInfoMessage("Impact Mandatory? " + isMand);
+
+// 27️⃣ Get field label
+var label = g_form.getLabel('priority');
+g_form.addInfoMessage("Label: " + label);
+
+// 28️⃣ Add field help text (below field)
+g_form.showFieldMsg('short_description', 'Please enter a clear summary', 'info');
+
+// 29️⃣ Remove help text
+g_form.hideFieldMsg('short_description');
+
+// 3️⃣0️⃣ Time-based flash
+g_form.flash('state', '#ADD8E6', 1000);
+
+// 31️⃣ Disable a choice option (display but disabled)
+g_form.setOptionDisabled('priority', '1', true);
+
+// 32️⃣ Enable a disabled choice option
+g_form.setOptionDisabled('priority', '1', false);
+
+// 33️⃣ Get display value
+var callerName = g_form.getDisplayValue('caller_id');
+g_form.addInfoMessage("Caller: " + callerName);
+
+// 34️⃣ Set display value (Reference fields)
+g_form.setDisplayValue('caller_id', 'Abel Tuter');
+
+// 35️⃣ Reload form
+g_form.reload();
+
+// 36️⃣ Add dependent value
+if (g_form.getValue('category') == 'hardware') {
+    g_form.addOption('subcategory', 'mouse', 'Mouse Issue');
+}
+
+// 37️⃣ Remove multiple options
+['1', '2', '3'].forEach(function(v){
+    g_form.removeOption('priority', v);
+});
