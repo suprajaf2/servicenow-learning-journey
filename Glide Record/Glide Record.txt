@@ -1,0 +1,70 @@
+Glide Record: GlideRecord is a server-side API in ServiceNow used to interact with the database.
+It is similar to writing SQL queries but in a ServiceNow-friendly way.
+
+You can use it in:
+
+Business Rules
+
+Script Includes
+
+Background Scripts
+
+Workflow scripts
+
+Scheduled Jobs
+
+Inbound Actions
+
+Fix Scripts
+
+Basic Syntax
+var gr = new GlideRecord('table_name');
+gr.query();
+while (gr.next()) {
+    gs.info(gr.getValue('field_name'));
+}
+
+Most Important GlideRecord Methods
+✔ Initialize Record
+var gr = new GlideRecord('incident');
+
+✔ Query Records
+gr.addQuery('priority', 1);
+gr.query();
+
+✔ Loop Through Records
+while (gr.next()) {
+    gs.info(gr.number);
+}
+
+✔ Get a Single Record
+gr.get('sys_id');
+gs.info(gr.short_description);
+
+✔ Insert a Record
+var gr = new GlideRecord('incident');
+gr.initialize();
+gr.short_description = 'Test Incident';
+gr.priority = 2;
+gr.insert();
+
+✔ Update a Record
+var gr = new GlideRecord('incident');
+if (gr.get('sys_id')) {
+    gr.priority = 1;
+    gr.update();
+}
+
+✔ Delete a Record
+var gr = new GlideRecord('incident');
+if (gr.get('sys_id')) {
+    gr.deleteRecord();
+}
+
+✔ addQuery() with Conditions
+gr.addQuery('priority', '1');
+gr.addQuery('state', 'IN', '2,3'); 
+
+✔ addEncodedQuery()
+gr.addEncodedQuery('active=true^priority=1');
+
